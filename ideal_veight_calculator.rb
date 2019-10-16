@@ -5,7 +5,5 @@
 print "Please, enter your name: "
 user_name = gets().chomp
 
-if !user_name.match(/^[[:alpha:][:blank:]]+$/)
-  print "Probably you enter a wrong name. Would you like to enter new name?(y/n) "
-  wrong_name_alert_reply = gets().chomp
-end
+print "Enter your current weight: "
+user_weight = gets().chomp
