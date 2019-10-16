@@ -7,7 +7,7 @@ def get_triangle_side(side_number)
   return gets.chomp.to_f
 end
 
-def triangle_is_equilateral?(triangle)
+def is_triangle_equilateral?(triangle)
   return triangle.values.uniq.length == 1
 end
 
