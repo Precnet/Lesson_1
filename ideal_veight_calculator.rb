@@ -19,13 +19,12 @@ def calculate_ideal_weight(current_height)
 end
 
 def generate_reply_message(user_name, calculated_weight)
-  print user_name, calculated_weight
   if calculated_weight > 0
     output_message = "#{user_name}, your optimal weight is #{calculated_weight + WEIGHT_CALCULATION_PENALTY}."
   else
     output_message = "#{user_name}, your have no excess weight."
   end
-  return calculated_weight
+  return output_message
 end
 
 user_name = get_user_name
