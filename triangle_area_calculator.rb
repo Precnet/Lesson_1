@@ -4,5 +4,5 @@
 
 def get_triangle_base
   print "Please, enter triangle base: "
-  return gets.cho
+  return gets.chomp.to_i
 end
