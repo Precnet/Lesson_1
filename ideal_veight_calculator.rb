@@ -6,12 +6,12 @@ WEIGHT_CALCULATION_PENALTY = 110
 
 def get_user_name
   print "Please, enter your name: "
-  return gets().chomp
+  return gets.chomp
 end
 
 def get_user_height
   print "Enter your current height: "
-  return gets().chomp
+  return gets.chomp
 end
 
 def calculate_ideal_weight(current_height)
