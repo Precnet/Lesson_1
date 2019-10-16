@@ -8,7 +8,7 @@ def get_triangle_side(side_number)
 end
 
 def triangle_is_equilateral?(triangle)
-  return triangle.unique.length == 1
+  return triangle.values.uniq.length == 1
 end
 
 triangle_data = Hash.new
