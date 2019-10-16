@@ -15,7 +15,7 @@ def get_user_weight
 end
 
 def calculate_ideal_weight(current_weight)
-  ideal_weight = Integer(current_weight) - WEIGHT_CALCULATION_PENALTY
+  return Integer(current_weight) - WEIGHT_CALCULATION_PENALTY
 end
 
 def print_uset_ideal_weight()
