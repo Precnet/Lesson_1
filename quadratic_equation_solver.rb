@@ -21,20 +21,23 @@ def calculate_discriminant(equation_data)
   return equation_data["b"]**2 - 4 * equation_data["a"] * equation_data["c"]
 end
 
-def get_amount_of_equation_roots(discriminant)
+def calculate_roots(equation)
+  equation_discriminant = calculate_discriminant(equation)
+  a = equation_data["a"]
+  b = equation_data["b"]
+  c = equation_data["c"]
   case
   when discriminant > 0
-    2
+
   when discriminant == 0
-    1
+
   else
-    0
+
   end
 end
+
+def calculate
 
 equation_data = Hash.new
 COEFFICIENTS_NAMES.each {|coefficient| equation_data[coefficient] = get_coefficient(coefficient)}
 print_equation(equation_data)
-
-equation_discriminant = calculate_discriminant(equation_data)
-num_of_equation_roots = get_amount_of_equation_roots(equation_discriminant)
