@@ -11,5 +11,9 @@ def is_triangle_equilateral?(triangle)
   return triangle.values.uniq.length == 1
 end
 
+def is_triangle_isosceles?(triangle)
+  return triangle.values.uniq.length <= 2
+end
+
 triangle_data = Hash.new
 TRIANGLE_SIDES.each {|side| triangle_data[side] = get_triangle_side(side)}
