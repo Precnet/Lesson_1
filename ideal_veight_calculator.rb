@@ -14,9 +14,13 @@ def get_user_weight
   return gets().chomp
 end
 
+def calculate_ideal_weight(current_weight)
+  ideal_weight = Integer(current_weight) - WEIGHT_CALCULATION_PENALTY
+end
 
+def print_uset_ideal_weight()
 
 user_name = get_user_name
 user_weight = get_user_weight
+user_optimal_weight = calculate_ideal_weight(user_weight)
 
-user_optimal_weight = Integer(user_weight) - WEIGHT_CALCULATION_PENALTY
