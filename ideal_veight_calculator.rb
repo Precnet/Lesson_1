@@ -15,7 +15,7 @@ def get_user_weight
 end
 
 def calculate_ideal_weight(current_weight)
-  return Integer(current_weight) - WEIGHT_CALCULATION_PENALTY
+  return current_weight.to_i - WEIGHT_CALCULATION_PENALTY
 end
 
 def generate_reply_message(user_name, calculated_weight)
