@@ -18,9 +18,10 @@ def calculate_ideal_weight(current_weight)
   return Integer(current_weight) - WEIGHT_CALCULATION_PENALTY
 end
 
-def print_uset_ideal_weight()
+def generate_reply_message(user_name, calculated_weight)
+  if calculated_weight > 0
+end
 
 user_name = get_user_name
 user_weight = get_user_weight
-user_optimal_weight = calculate_ideal_weight(user_weight)
-
+calculate_optimal_weight = calculate_ideal_weight(user_weight)
