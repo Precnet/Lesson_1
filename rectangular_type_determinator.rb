@@ -7,5 +7,9 @@ def get_triangle_side(side_number)
   return gets.chomp.to_f
 end
 
+def triangle_is_equilateral?(triangle)
+  return triangle.unique.length == 1
+end
+
 triangle_data = Hash.new
 TRIANGLE_SIDES.each {|side| triangle_data[side] = get_triangle_side(side)}
