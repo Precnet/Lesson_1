@@ -17,6 +17,8 @@ end
 
 def is_triangle_right?(triangle)
   hypotenuse = get_hypotenuse(triangle)
+  # I`m not glad with this solution because of changing original Hash, but it`s working
+  # obvious candidate for refactoring
   triangle.delete(triangle.key(hypotenuse))
   sum_of_squared_legs = triangle.values.sum{|leg| leg**2}
   return hypotenuse == Math.sqrt(sum_of_squared_legs)
@@ -29,5 +31,6 @@ end
 triangle_data = Hash.new
 TRIANGLE_SIDES.each {|side| triangle_data[side] = get_triangle_side(side)}
 
-print is_triangle_right?(triangle_data)
-puts triangle_data
+puts "Triangle is equilateral." if is_triangle_equilateral?(triangle_data)
+puts "Triangle is isosceles." if is_triangle_isosceles?(triangle_data)
+puts "Triangle is right." if is_triangle_right?(triangle_data)
