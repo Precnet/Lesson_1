@@ -15,3 +15,5 @@ end
 def calculate_triangle_area(base, height)
   return 1 / 2 * base * height
 end
+
+puts "Area of this triangle equals #{calculate_triangle_area(get_triangle_base, get_triangle_height)}"
