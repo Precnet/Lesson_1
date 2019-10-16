@@ -11,3 +11,7 @@ def get_triangle_height
   print "Please, enter triangle height: "
   return gets.chomp.to_i
 end
+
+def calculate_triangle_area(base, height)
+  return 1 / 2 * base * height
+end
