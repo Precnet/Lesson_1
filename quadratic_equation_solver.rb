@@ -6,15 +6,15 @@ def get_coefficient(coefficient)
 end
 
 def print_equation(equation_data)
-  puts "Your equation is:"
+  puts "\nYour equation is:"
   a = equation_data["a"]
   b = equation_data["b"]
   c = equation_data["c"]
-  puts "#{a}x**2 #{get_sign_str(b)} #{b} #{get_sign_str(c)} #{c}"
+  puts "#{a}x**2 #{get_number_readable_form(b)}x #{get_number_readable_form(c)}"
 end
 
-def get_sign_str(number)
-  return number > 0 ? "+" : "-"
+def get_number_readable_form(number)
+  return number > 0 ? "+ #{number}" : "- #{number * -1}"
 end
 
 def calculate_discriminant(equation_data)
