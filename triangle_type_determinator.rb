@@ -31,6 +31,6 @@ end
 triangle_data = Hash.new
 TRIANGLE_SIDES.each {|side| triangle_data[side] = get_triangle_side(side)}
 
-puts "Triangle is equilateral." if is_triangle_equilateral?(triangle_data)
-puts "Triangle is isosceles." if is_triangle_isosceles?(triangle_data)
-puts "Triangle is right." if is_triangle_right?(triangle_data)
+puts 'Triangle is equilateral.' if is_triangle_equilateral?(triangle_data)
+puts 'Triangle is isosceles.' if is_triangle_isosceles?(triangle_data)
+puts 'Triangle is right.' if is_triangle_right?(triangle_data)
