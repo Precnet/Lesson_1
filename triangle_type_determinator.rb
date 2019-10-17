@@ -4,15 +4,15 @@ TRIANGLE_SIDES = %w(first second third)
 
 def get_triangle_side(side_number)
   print "Please, enter #{side_number} side of a triangle: "
-  return gets.chomp.to_f
+  gets.chomp.to_f
 end
 
 def is_triangle_equilateral?(triangle)
-  return triangle.values.uniq.length == 1
+  triangle.values.uniq.length == 1
 end
 
 def is_triangle_isosceles?(triangle)
-  return triangle.values.uniq.length <= 2
+  triangle.values.uniq.length <= 2
 end
 
 def is_triangle_right?(triangle)
@@ -21,11 +21,11 @@ def is_triangle_right?(triangle)
   # obvious candidate for refactoring
   triangle.delete(triangle.key(hypotenuse))
   sum_of_squared_legs = triangle.values.sum{|leg| leg**2}
-  return hypotenuse == Math.sqrt(sum_of_squared_legs)
+  hypotenuse == Math.sqrt(sum_of_squared_legs)
 end
 
 def get_hypotenuse(triangle_sides)
-  return triangle_sides.values.max
+  triangle_sides.values.max
 end
 
 triangle_data = Hash.new
