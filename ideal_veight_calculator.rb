@@ -20,9 +20,9 @@ end
 
 def generate_reply_message(user_name, calculated_weight)
   if calculated_weight > 0
-    '#{user_name}, your optimal weight is #{calculated_weight}.'
+    "#{user_name}, your optimal weight is #{calculated_weight}."
   else
-    '#{user_name}, your have no excess weight.'
+    "#{user_name}, your have no excess weight."
   end
 end
 
