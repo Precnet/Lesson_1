@@ -4,16 +4,16 @@
 
 def get_triangle_base
   print "Please, enter triangle base: "
-  return gets.chomp.to_i
+  gets.chomp.to_i
 end
 
 def get_triangle_height
   print "Please, enter triangle height: "
-  return gets.chomp.to_i
+  gets.chomp.to_i
 end
 
 def calculate_triangle_area(base, height)
-  return 0.5 * base * height
+  0.5 * base * height
 end
 
 puts "Area of this triangle equals #{calculate_triangle_area(get_triangle_base, get_triangle_height)}"
