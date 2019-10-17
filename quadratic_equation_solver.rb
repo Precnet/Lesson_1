@@ -45,7 +45,7 @@ def calculate_root(a, b, root_of_d)
   (-b + root_of_d) / (2 * a)
 end
 
-equation_data = Hash.new
+equation_data = {}
 COEFFICIENTS_NAMES.each {|coefficient| equation_data[coefficient] = get_coefficient(coefficient)}
 print_equation(equation_data)
 print(calculate_roots(equation_data))
