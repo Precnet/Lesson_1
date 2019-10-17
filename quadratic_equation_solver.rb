@@ -7,9 +7,9 @@ end
 
 def print_equation(equation_data)
   puts "\nYour equation is:"
-  a = equation_data["a"]
-  b = equation_data["b"]
-  c = equation_data["c"]
+  a = equation_data['a']
+  b = equation_data['b']
+  c = equation_data['c']
   puts "#{a}x**2 #{get_number_readable_form(b)}x #{get_number_readable_form(c)}"
 end
 
@@ -18,15 +18,15 @@ def get_number_readable_form(number)
 end
 
 def calculate_discriminant(equation_data)
-  equation_data["b"]**2 - 4 * equation_data["a"] * equation_data["c"]
+  equation_data['b']**2 - 4 * equation_data['a'] * equation_data['c']
 end
 
 def calculate_roots(equation)
   # method doing more than one thing, but I`m kinda tired to rewrite it right now
   discriminant = calculate_discriminant(equation).to_f
-  a = equation["a"]
-  b = equation["b"]
-  c = equation["c"]
+  a = equation['a']
+  b = equation['b']
+  c = equation['c']
   case
   when discriminant > 0
     x_1 = calculate_root(a, b, Math.sqrt(discriminant))
