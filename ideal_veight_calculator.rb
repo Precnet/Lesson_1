@@ -6,16 +6,16 @@ WEIGHT_CALCULATION_PENALTY = 110
 
 def get_user_name
   print "Please, enter your name: "
-  return gets.chomp
+  gets.chomp
 end
 
 def get_user_height
   print "Enter your current height: "
-  return gets.chomp
+  gets.chomp
 end
 
 def calculate_ideal_weight(current_height)
-  return current_height.to_i - WEIGHT_CALCULATION_PENALTY
+  current_height.to_i - WEIGHT_CALCULATION_PENALTY
 end
 
 def generate_reply_message(user_name, calculated_weight)
@@ -24,7 +24,7 @@ def generate_reply_message(user_name, calculated_weight)
   else
     output_message = "#{user_name}, your have no excess weight."
   end
-  return output_message
+  output_message
 end
 
 user_name = get_user_name
