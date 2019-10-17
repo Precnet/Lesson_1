@@ -28,7 +28,7 @@ def get_hypotenuse(triangle_sides)
   triangle_sides.values.max
 end
 
-triangle_data = Hash.new
+triangle_data = {}
 TRIANGLE_SIDES.each {|side| triangle_data[side] = get_triangle_side(side)}
 
 puts 'Triangle is equilateral.' if is_triangle_equilateral?(triangle_data)
