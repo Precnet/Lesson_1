@@ -5,11 +5,9 @@ def get_coefficient(coefficient)
   gets.chomp.to_f
 end
 
-def print_equation(equation_data)
+def print_equation(equation)
   puts "\nYour equation is:"
-  a = equation_data['a']
-  b = equation_data['b']
-  c = equation_data['c']
+  a, b, c = equation.values
   puts "#{a}x**2 #{get_number_readable_form(b)}x #{get_number_readable_form(c)}"
 end
 
@@ -24,9 +22,7 @@ end
 def calculate_roots(equation)
   # method doing more than one thing, but I`m kinda tired to rewrite it right now
   discriminant = calculate_discriminant(equation).to_f
-  a = equation['a']
-  b = equation['b']
-  c = equation['c']
+  a, b = equation.values.slice(0, 1)
   case
   when discriminant > 0
     x_1 = calculate_root(a, b, Math.sqrt(discriminant))
